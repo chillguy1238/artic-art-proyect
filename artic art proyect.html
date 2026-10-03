@@ -1,0 +1,294 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Artic — Comisiones de Arte</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f1ff;
+            color: #222;
+        }
+
+        header {
+            background: linear-gradient(135deg, #7c4dff, #ff70b7);
+            color: white;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        header h1 {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 20px;
+        }
+
+        nav {
+            background: #242038;
+            text-align: center;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ff70b7;
+        }
+
+        section {
+            max-width: 950px;
+            margin: 35px auto;
+            padding: 35px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        section h2 {
+            color: #7c4dff;
+            margin-bottom: 18px;
+            font-size: 30px;
+        }
+
+        section p {
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .integrantes {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .persona {
+            background: #f5f1ff;
+            border-radius: 15px;
+            padding: 25px;
+            width: 250px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .persona:hover {
+            transform: translateY(-7px);
+        }
+
+        .persona h3 {
+            color: #ff4fa3;
+            margin-bottom: 10px;
+        }
+
+        .precio {
+            background: linear-gradient(135deg, #7c4dff, #ff70b7);
+            color: white;
+            text-align: center;
+            padding: 30px;
+            border-radius: 18px;
+            margin-top: 20px;
+        }
+
+        .precio h3 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .horarios {
+            margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .horarios th,
+        .horarios td {
+            padding: 14px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .horarios th {
+            background: #7c4dff;
+            color: white;
+        }
+
+        .horarios tr:nth-child(even) {
+            background: #f5f1ff;
+        }
+
+        footer {
+            background: #242038;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        .boton {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 13px 25px;
+            background: #ff70b7;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+        .boton:hover {
+            background: #7c4dff;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 40px;
+            }
+
+            section {
+                margin: 20px;
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🎨 ARTIC</h1>
+        <p>Comisiones de arte hechas con creatividad y dedicación</p>
+    </header>
+
+    <nav>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#artistas">Artistas</a>
+        <a href="#precios">Precios</a>
+        <a href="#horarios">Horarios</a>
+    </nav>
+
+    <section id="nosotros">
+        <h2>¿Quiénes somos?</h2>
+
+        <p>
+            Somos un proyecto hecho por unos jóvenes que quieren salir adelante
+            por su propia cuenta, utilizando su práctica y pasión por el arte.
+        </p>
+
+        <br>
+
+        <p>
+            En <strong>Artic</strong> realizamos comisiones de arte para que puedas
+            convertir tus ideas, personajes y ocurrencias en dibujos hechos
+            especialmente para ti. 🎨✨
+        </p>
+
+        <div class="precio" id="precios">
+            <h3>💰 Nuestros precios</h3>
+            <p>
+                Las comisiones tienen precios entre
+                <strong>$5.500 y $6.000 COP</strong>.
+            </p>
+        </div>
+    </section>
+
+    <section id="artistas">
+        <h2>🎨 Nuestro equipo</h2>
+
+        <div class="integrantes">
+
+            <div class="persona">
+                <h3>wonderany</h3>
+                <p>Artista y creador/a de comisiones.</p>
+            </div>
+
+            <div class="persona">
+                <h3>French Fries</h3>
+                <p>Artista y miembro del proyecto.</p>
+            </div>
+
+            <div class="persona">
+                <h3>Butter</h3>
+                <p>Artista y miembro del proyecto.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="horarios">
+        <h2>🕒 Horarios</h2>
+
+        <table class="horarios">
+            <tr>
+                <th>Día</th>
+                <th>Horario</th>
+            </tr>
+
+            <tr>
+                <td>Lunes</td>
+                <td>4:00 PM - 7:00 PM</td>
+            </tr>
+
+            <tr>
+                <td>Martes</td>
+                <td>4:00 PM - 7:00 PM</td>
+            </tr>
+
+            <tr>
+                <td>Miércoles</td>
+                <td>4:00 PM - 7:00 PM</td>
+            </tr>
+
+            <tr>
+                <td>Jueves</td>
+                <td>4:00 PM - 7:00 PM</td>
+            </tr>
+
+            <tr>
+                <td>Viernes</td>
+                <td>4:00 PM - 8:00 PM</td>
+            </tr>
+
+            <tr>
+                <td>Sábado</td>
+                <td>10:00 AM - 6:00 PM</td>
+            </tr>
+
+            <tr>
+                <td>Domingo</td>
+                <td>Cerrado</td>
+            </tr>
+        </table>
+
+        <a href="#" class="boton">🎨 Pedir una comisión</a>
+    </section>
+
+    <footer>
+        <p>© 2026 Artic — Hecho por jóvenes artistas 💜</p>
+        <p>Creatividad • Práctica • Arte</p>
+    </footer>
+
+</body>
+</html>
+```
